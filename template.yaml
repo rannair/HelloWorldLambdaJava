@@ -10,7 +10,7 @@ Resources:
       FunctionName: HelloWorldJava
       Runtime: java11
       MemorySize: 512
-      Handler: book.HelloWorld::handleEnvironmentVariable
+      Handler: book.HelloWorld::pojoInputHandler
       CodeUri: target/lambda.zip
       Environment:
         Variables:

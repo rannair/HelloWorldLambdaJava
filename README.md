@@ -28,9 +28,15 @@ To test:
 ```
 aws lambda invoke --invocation-type RequestResponse  --function-name HelloWorldJava outputfile.txt
 
+```
+```
 aws lambda invoke --invocation-type RequestResponse  --function-name TimeoutLambda outputfile.txt
-
+```
+```
 aws lambda invoke --invocation-type RequestResponse  --function-name HelloWorldJava  --cli-binary-format raw-in-base64-out  --payload { "world": "$input.params('s')" } outputfile.txt
+```
+```
+aws lambda invoke  --invocation-type RequestResponse --function-name HelloWorldJava --cli-binary-format raw-in-base64-out --payload '{ "title": "Lambda-development" }' outputfile.txt
 ```
 Tear down stack using:
 ```
