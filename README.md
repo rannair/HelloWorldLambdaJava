@@ -33,8 +33,13 @@ aws lambda invoke --invocation-type RequestResponse  --function-name HelloWorldJ
 aws lambda invoke --invocation-type RequestResponse  --function-name TimeoutLambda outputfile.txt
 ```
 ```
-aws lambda invoke --invocation-type RequestResponse  --function-name HelloWorldJava  --cli-binary-format raw-in-base64-out  --payload { "world": "$input.params('s')" } outputfile.txt
+aws lambda invoke  --invocation-type RequestResponse --function-name HelloWorldJava --cli-binary-format raw-in-base64-out --payload '{ "s": "Ranjeet" }' outputfile.txt
 ```
+```
+aws lambda invoke  --invocation-type Event --function-name HelloWorldJava --cli-binary-format raw-in-base64-out --pay
+load '{ "s": "NCS" }' outputfile.txt
+```
+
 ```
 aws lambda invoke  --invocation-type RequestResponse --function-name HelloWorldJava --cli-binary-format raw-in-base64-out --payload '{ "title": "Lambda-development" }' outputfile.txt
 ```
