@@ -25,10 +25,15 @@ The above will create a new function in Lambda, so you can test via the Lambda w
 or via the CLI using `aws lambda invoke`.
 
 To test:
+```
 aws lambda invoke --invocation-type RequestResponse  --function-name HelloWorldJava outputfile.txt
+
 aws lambda invoke --invocation-type RequestResponse  --function-name TimeoutLambda outputfile.txt
+
 aws lambda invoke --invocation-type RequestResponse  --function-name HelloWorldJava  --cli-binary-format raw-in-base64-out  --payload { "world": "$input.params('s')" } outputfile.txt
-
+```
 Tear down stack using:
-
+```
 aws cloudformation delete-stack --stack-name HelloWorldLambdaJava
+
+```
